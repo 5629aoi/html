@@ -1,8 +1,8 @@
 $(function(){
     $.ajax({
         url: 'test.py',
-        type: 'post',
-        data: 'aoi'
+        type: 'POST',
+        data: '送信データ'
     }).done(function(data){
         console.log(data);
     }).fail(function(){
