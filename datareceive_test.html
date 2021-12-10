@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <meta charset="utf-8">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>            
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta name="description" content="hakodate-a05">
+            <meta name="format-detection" content="telephone=no,address=no,email=no">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="robots" content="noindex,nofollow">
+            <title>hakodate-a05</title>
+            <!--<link rel="shortcut icon" href="/img/hakodatekousen_kousyo.jpg" >-->
+            <!--<link rel="stylesheet" href="hakodate-a05.css">-->
+            
+        </head>
+            <body>
+                <p>データ送信</p>
+                <script>
+                    $(function(){
+                        $.ajax({
+                        url: 'test.ipynb',
+                       type: 'post',
+                        data: 'aoi'
+                    }).done(function(data){
+                         console.log(data);
+                    }).fail(function(){
+                       console.log('failed');
+                    });
+                    });
+                    $(document).ready(function(){
+                        alert("jQueryファイルの読み込み完了でーす。");
+                    });
+                </script>
+            </body>
+    </html>
