@@ -3,7 +3,7 @@ window.onload = function() {
     document.getElementById('calc_button').onclick = function() {
       post();
     };
-  
+    var xhr = new XMLHttpRequest();
     // サーバからのデータ受信を行った際の動作
     xhr.onload = function (e) {
       if (xhr.readyState === 4) {
@@ -17,10 +17,10 @@ window.onload = function() {
   
   // 計算ボタンを押した際の動作
   function post() {
-    const xhr = new XMLHttpRequest();
-    xhr.open('POST', 'https://5629aoi.github.io/html/calc.php');
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', 'https://5629aoi.github.io/localserver/calc.php');
     xhr.setRequestHeader('content-type', 'application/x-www-form-urlencoded;charset=UTF-8');
     // フォームに入力した値をリクエストとして設定
     var request = "arg1=" + arg1.value + "&arg2=" + arg2.value;
-    xhr.send(request);
+    xhr.send('aoi');
   };
