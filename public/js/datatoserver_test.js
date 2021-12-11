@@ -18,9 +18,9 @@ window.onload = function() {
   // 計算ボタンを押した際の動作
   function post() {
     var xhr = new XMLHttpRequest();
-    xhr.open('POST', 'https://5629aoi.github.io/localserver/calc.php');
+    xhr.open('POST', 'http://localhost:8000/hack_u_hakodate-a05/hakodate-a05/calc.php');
     xhr.setRequestHeader('content-type', 'application/x-www-form-urlencoded;charset=UTF-8');
     // フォームに入力した値をリクエストとして設定
     var request = "arg1=" + arg1.value + "&arg2=" + arg2.value;
-    xhr.send('aoi');
+    xhr.send('request');
   };
